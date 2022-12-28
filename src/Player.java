@@ -6,8 +6,8 @@ public class Player {
         players_name = new_name;
     }
 
-    String shot(float v_coordinates, float h_coordinates) {
-        return ("Игрок " + players_name + " решил ударить по ячейке " + "{" + v_coordinates + "}:{" + h_coordinates + "}");
+    String shot(int v_coordinates, int  h_coordinates) {
+        return ("Игрок " + players_name + " решил ударить по ячейке " + "{" + v_coordinates + ":" + h_coordinates + "}");
     }
 
     void change_points() {
