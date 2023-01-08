@@ -1,27 +1,40 @@
 public class Player {
-    String players_name;
-    int players_points;
+    Ship[] shipList;
+    String name;
+    int points;
+    Field field;
 
-    void change_name(String new_name) {
-        players_name = new_name;
+    public Player(String name, int points) {
+        this.name = name;
+        this.points = points;
+        this.shipList = new Ship[ShipsCounter()];
+    }
+    public Player(String name) {
+        this.name = name;
+        this.shipList = new Ship[ShipsCounter()];
+    }
+    public Player(int points) {
+        this.points = points;
+        this.shipList = new Ship[ShipsCounter()];
     }
 
-    String shot(int v_coordinates, int  h_coordinates) {
-        return ("Игрок " + players_name + " решил ударить по ячейке " + "{" + v_coordinates + ":" + h_coordinates + "}");
+    int ShipsCounter() {
+        int count = 0;
+        for (int i = 0; i < Field.rules.length; i++) {
+            count = count + Field.rules[i];
+        }
+        return count;
     }
 
-    void change_points() {
-        players_points++;
+    void changeName(String newName) {
+        name = newName;
     }
 
-    public Player(String players_name, int players_points) {
-        this.players_name = players_name;
-        this.players_points = players_points;
+    String shot(int vCoordinates, int  hCoordinates) {
+        return ("Игрок " + name + " решил ударить по ячейке " + "{" + vCoordinates + ":" + hCoordinates + "}");
     }
-    public Player(String players_name) {
-        this.players_name = players_name;
-    }
-    public Player(int players_points) {
-        this.players_points = players_points;
+
+    void changePoints() {
+        points++;
     }
 }
