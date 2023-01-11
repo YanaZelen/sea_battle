@@ -1,3 +1,6 @@
+/* Комментарии по коду. 1) Интересное решение вывода в консоль массива. Мне понравилось. Не типично. Но есть ещё короче способ через Arrays :) (можешь если интересно заморочиться, но в целом и так ок)
+        3)В поле Экземпляр класса игрок, а не его имя
+        5) Очень важно называть переменные с маленькой первой буквы, иначе они путаются с классами */
 public class Player {
     Ship[] shipList;
     String name;
@@ -32,6 +35,10 @@ public class Player {
 
     String shot(int vCoordinates, int  hCoordinates) {
         return ("Игрок " + name + " решил ударить по ячейке " + "{" + vCoordinates + ":" + hCoordinates + "}");
+    }
+
+    public void setField(Field field){
+        this.field = field;
     }
 
     void changePoints() {
