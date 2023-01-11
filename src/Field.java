@@ -10,6 +10,12 @@ public class Field {
     Player player;
     static int[] rules = new int[] {4, 3, 2, 1};
 
+
+    public Field(Player player) {
+        this.player = player;
+    }
+
+
     void occupied(int vCoordinates, int  hCoordinates) {
         playingField[vCoordinates][hCoordinates] = 1;
     }
@@ -32,7 +38,4 @@ public class Field {
         }
     }
 
-    public Field(Player player) {
-        this.player = player;
-    }
 }

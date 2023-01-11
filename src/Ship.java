@@ -11,12 +11,6 @@ public class Ship {
     static String brig = "Бриг";
     static String frigate = "Фрегат";
 
-    String getPlayersName() {
-        return playersName;
-    }
-    int getShipsSize() {
-        return shipsSize;
-    }
 
     public Ship(String shipsName, int shipsSize, String playersName) {
         this.shipsName = shipsName;
@@ -27,5 +21,13 @@ public class Ship {
     }
     public Ship(int shipsSize, String playersName) {
         this.shipsSize = shipsSize;
+    }
+
+
+    String getPlayersName() {
+        return playersName;
+    }
+    int getShipsSize() {
+        return shipsSize;
     }
 }
