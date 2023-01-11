@@ -1,6 +1,3 @@
-/* Комментарии по коду.
-        3)В поле Экземпляр класса игрок, а не его имя
-        5) Очень важно называть переменные с маленькой первой буквы, иначе они путаются с классами */
 
 public class Ship {
     int shipsSize;
@@ -11,12 +8,6 @@ public class Ship {
     static String brig = "Бриг";
     static String frigate = "Фрегат";
 
-    String getPlayersName() {
-        return playersName;
-    }
-    int getShipsSize() {
-        return shipsSize;
-    }
 
     public Ship(String shipsName, int shipsSize, String playersName) {
         this.shipsName = shipsName;
@@ -27,5 +18,13 @@ public class Ship {
     }
     public Ship(int shipsSize, String playersName) {
         this.shipsSize = shipsSize;
+    }
+
+
+    String getPlayersName() {
+        return playersName;
+    }
+    int getShipsSize() {
+        return shipsSize;
     }
 }

@@ -1,6 +1,3 @@
-/* Комментарии по коду.
-        3)В поле Экземпляр класса игрок, а не его имя
-        5) Очень важно называть переменные с маленькой первой буквы, иначе они путаются с классами */
 
 import java.util.Arrays;
 
@@ -9,6 +6,12 @@ public class Field {
     int[][] playingField = new int[10][10];
     Player player;
     static int[] rules = new int[] {4, 3, 2, 1};
+
+
+    public Field(Player player) {
+        this.player = player;
+    }
+
 
     void occupied(int vCoordinates, int  hCoordinates) {
         playingField[vCoordinates][hCoordinates] = 1;
@@ -32,7 +35,4 @@ public class Field {
         }
     }
 
-    public Field(Player player) {
-        this.player = player;
-    }
 }
