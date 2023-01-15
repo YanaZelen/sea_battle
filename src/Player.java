@@ -28,7 +28,9 @@ public class Player {
         return count;
     }
 
-
+    String getName() {
+        return name;
+    }
     void changeName(String newName) {
         name = newName;
     }
