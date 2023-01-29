@@ -1,14 +1,26 @@
 
 public class Ship {
-    int shipsSize;
-    String shipsName;
+    //int shipsSize;
+    //String shipsName;
     Player player;
-    static String tender = "Тендер";
-    static String schooner = "Шхуна";
-    static String brig = "Бриг";
-    static String frigate = "Фрегат";
+    TypeOfShips type;
+
+    static TypeOfShips tender = TypeOfShips.TENDER;
+    // final static String tender = "Тендер";
+    static TypeOfShips schooner = TypeOfShips.SCHOONER;
+    //final static String schooner = "Шхуна";
+    static TypeOfShips brig = TypeOfShips.BRIG;
+    //final static String brig = "Бриг";
+    static TypeOfShips frigate = TypeOfShips.FRIGATE;
+    //final static String frigate = "Фрегат";
 
 
+    public Ship(TypeOfShips type, Player player) {
+        this.player = player;
+        this.type = type;
+    }
+
+    /*
     public Ship(String shipsName, int shipsSize, Player player) {
         this.shipsName = shipsName;
         this.shipsSize = shipsSize;
@@ -23,11 +35,27 @@ public class Ship {
         this.player = player;
     }
 
+    int getShipsSize() {
+        return shipsSize;
+    }
+
+     */
 
     String getPlayersName() {
         return player.name;
     }
-    int getShipsSize() {
-        return shipsSize;
+
+    String getTenderName() {
+        return tender.name;
+    }
+    String getSchoonerName() {
+        return schooner.name;
+    }
+    String getBrigName() {
+        return brig.name;
+    }
+    String getFrigateName() {
+        return frigate.name;
     }
 }
+
