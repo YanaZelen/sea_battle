@@ -3,9 +3,9 @@ import java.util.Arrays;
 
 public class Field {
 
-    int[][] playingField = new int[10][10];
+    final int[][] playingField = new int[10][10];
     Player player;
-    static int[] rules = new int[] {4, 3, 2, 1};
+    final static int[] rules = new int[] {4, 3, 2, 1};
 
 
     public Field(Player player) {
